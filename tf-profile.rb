@@ -22,8 +22,6 @@ class TfProfile < Formula
     <<~EOS
       tf-profile has been installed. You can run it using the "tf-profile" command.
 
-      If you want to run tf-profile from other directories, you can create a symbolic link to /usr/local/bin:
-        sudo ln -s #{opt_bin}/tf-profile /usr/local/bin
     EOS
   end
 

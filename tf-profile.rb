@@ -1,32 +1,22 @@
-
 class TfProfile < Formula
-  desc "This Formula runs the following repository: https://github.com/datarootsio/tf-profile"
+  desc "This is a brewtap which downolads the binary file and make it executable for the following repository https://github.com/datarootsio/tf-profile"
   homepage "https://github.com/datarootsio/tf-profile"
-  url "https://github.com/datarootsio/tf-profile/archive/refs/tags/release/0.2.0.tar.gz"
-  sha256 "8e98face8a11b4094b050c337efc47498eca39594e1a9bf786a5f24d02aac993"
+  url "https://github.com/datarootsio/tf-profile/releases/download/release%2F0.2.0/tf-profile-v0.2.0-darwin.zip"
+  sha256 "a866c27a2b2200d38feb542be8a406f40dd1934063f3d84c6e683999bbac01bb"
   license "MIT"
 
-  depends_on "go" => :build
   def install
-    # Extract the source code archive
-    system "tar", "xf", "#{cached_download}", "--strip-components=1"
-
-    # Build the Go code
-    system "go", "build", "."
-
-    # Install the binary
-    bin.install "tf-profile"
-  end
-
-  def caveats
-    <<~EOS
-      tf-profile has been installed. You can run it using the "tf-profile" command.
-
-    EOS
+    bin.install tf-profile
   end
 
   test do
-    # Run tf-profile --help and check the output
-    assert_match "tf-profile is a CLI tool to profile Terraform runs", shell_output("#{bin}/tf-profile --help")
+    # Verify that the binary exists and is executable
+    assert_predicate bin/"tf-profile", :exist?
+    assert_predicate bin/"tf-profile", :executable?
+
+    # Run a simple test command
+    output = shell_output("#{bin}/tf-profile --help")
+    assert_match "Usage:", output.lines.first.chomp
+    system "false"
   end
 end

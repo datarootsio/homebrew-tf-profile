@@ -6,7 +6,7 @@ class TfProfile < Formula
   license "MIT"
 
   def install
-    bin.install tf-profile
+    bin.install "tf-profile"
   end
 
   test do

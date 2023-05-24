@@ -7,4 +7,5 @@ This is a Homebrew formula for the [tf-profile](https://github.com/datarootsio/t
 To install TfProfile using Homebrew, run the following command:
 
 ```shell
+brew tap datarootsio/tf-profile
 brew install tf-profile

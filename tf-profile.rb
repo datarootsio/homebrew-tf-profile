@@ -2,7 +2,9 @@ class TfProfile < Formula
   desc "This is a brewtap which downloads the binary file and makes it executable for the following repository https://github.com/datarootsio/tf-profile"
   homepage "https://github.com/datarootsio/tf-profile"
   license "MIT"
+  tag = `git ls-remote --tags --sort="v:refname" --refs https://github.com/datarootsio/tf-profile.git | tail -n1 | awk -F/ '{print $NF}'`.strip
 
+  version tag 
   if OS.mac?
     if Hardware::CPU.intel?
       url "https://github.com/datarootsio/tf-profile/releases/download/v0.2.1/tf-profile-v0.2.1-darwin-amd64.zip"

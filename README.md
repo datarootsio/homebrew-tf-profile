@@ -9,6 +9,7 @@ To install TfProfile using Homebrew, run the following command:
 ```shell
 brew tap datarootsio/tf-profile
 brew install tf-profile
+```
 
 ## Release a new version
 

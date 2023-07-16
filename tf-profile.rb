@@ -7,27 +7,27 @@ class TfProfile < Formula
   version tag 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-darwin-amd64.zip"
-      sha256 "986b2169e1934bdf6895ef987a2895862318a627708ceec8d7635699422df1f7"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-darwin-amd64.zip"
+      sha256 "b5afb85a1d2936d95928b5ca5d59001c6ad0fe5be48af2e03fd1d32b2f17b589"
     elsif Hardware::CPU.arm?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-darwin-arm64.zip"
-      sha256 "6eef95f971b8e801ab7c260e967e9b8fb7d12a7e17309b3eb0d6eadf3ba4e97b"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-darwin-arm64.zip"
+      sha256 "cc702bdf5698fb81b3f87803308df9e57870a55ac05132cda3e60ca11880a1a1"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-linux-amd64.zip"
-      sha256 "36f5ec0747d18edb61c5f0b8ce2cfa6a71b474113a004234af9828a9eb170c51"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-linux-amd64.zip"
+      sha256 "a58bf4407436c1ac8553774c8b385ef23f0a2484e75f1fb13888ac8aa9e7ac6a"
     elsif Hardware::CPU.arm?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-linux-arm64.zip"
-      sha256 "ef4f2d1a9ee931159cc1d4da02f6b5a1dc1d350dc8085b4df074edeffd8c912d"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-linux-arm64.zip"
+      sha256 "6456e7a62dc14862c06ed80f5688901af697c5dfd415daf1a4c99bc54870f164"
     end
   elsif OS.windows?
     if Hardware::CPU.intel?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-windows-amd64.zip"
-      sha256 "65636e1606e402789b8f720cc14d97d0e5beefdcd70ae39c101f968ad40906c2"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-windows-amd64.zip"
+      sha256 "ea2dbdea521b18c83d430c8a975e2b6661680e9996e4afb079a5b5ec788885e1"
     elsif Hardware::CPU.arm?
-      url "https://github.com/datarootsio/tf-profile/releases/download/v0.3.0/tf-profile-v0.3.0-windows-arm64.zip"
-      sha256 "cc850d018324e074111642f6b6b0b7853b2f4a20976f69265ef12302f3fc9498"
+      url "https://github.com/datarootsio/tf-profile/releases/download/v0.4.0/tf-profile-v0.4.0-windows-arm64.zip"
+      sha256 "dfb1285eef14286e87e5ebc335a7dc1254673ddcba78eb0b7f547dfb680a514b"
     end
   end
 
